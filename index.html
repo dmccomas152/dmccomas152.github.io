@@ -232,6 +232,54 @@
       margin-bottom: 1rem;
     }
 
+    /* ── BIO ── */
+    #bio {
+      background: #0d0d0d;
+      border-top: 1px solid #1a1a1a;
+    }
+
+    .bio-inner {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .bio-header {
+      position: sticky;
+      top: 8rem;
+    }
+
+    .bio-photo-wrap {
+      margin-top: 2.5rem;
+      border-left: 3px solid var(--gold-dim);
+      overflow: hidden;
+    }
+
+    .bio-photo {
+      width: 100%;
+      display: block;
+      filter: grayscale(20%) contrast(1.05);
+      transition: filter 0.4s ease;
+    }
+
+    .bio-photo:hover { filter: grayscale(0%) contrast(1); }
+
+    .bio-content p {
+      font-size: 1.05rem;
+      font-weight: 300;
+      line-height: 1.9;
+      color: #aaa;
+      margin-bottom: 1.6rem;
+    }
+
+    .bio-content p:last-child { margin-bottom: 0; }
+
+    .bio-content em {
+      font-style: italic;
+      color: var(--cream);
+    }
+
     /* ── SERVICES ── */
     #services {
       background: var(--black);
@@ -704,6 +752,11 @@
         flex-shrink: 0;
       }
 
+      .bio-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .bio-header { position: static; }
+      .bio-photo-wrap { max-width: 320px; }
+      .bio-content p { font-size: 1rem; }
+
       /* Video cards */
       .video-grid { grid-template-columns: 1fr; gap: 1.5rem; }
       .video-embed { aspect-ratio: 16/9; }
@@ -736,6 +789,7 @@
     <a href="#hero" class="nav-logo">Drew McComas</a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
+      <li><a href="#bio">Bio</a></li>
       <li><a href="#work">Work</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -761,6 +815,25 @@
     <div class="hero-scroll">
       <div class="scroll-line"></div>
       <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- BIO -->
+  <section id="bio">
+    <div class="bio-inner">
+      <div class="bio-header">
+        <p class="section-label">About</p>
+        <h2 class="section-title">Bio</h2>
+        <div class="bio-photo-wrap">
+          <img src="DSC01252.jpg" alt="Drew McComas" class="bio-photo" />
+        </div>
+      </div>
+      <div class="bio-content">
+        <p>Drew McComas is a Chicago-based percussionist, composer/arranger, video editor, and educator. A graduate of Northwestern University with a Bachelor of Music in Percussion Performance — where he studied with She-e Wu, Christopher Lamb, Vadim Karpinos, and Jon Deitemyer — Drew also pursued studies in Film Composition & Post Production, a combination that continues to define his multifaceted career.</p>
+        <p>As a percussionist, Drew serves as an Ensemble Member and Technical Director of Bridge Percussion. Over his decade-long performing career, he has played in the Greater Chicago and Charlotte areas, with notable credits including the original cast-album recording for <em>Abandon All Hope: A Musical Comedy</em>, the Wirtz Center's production of <em>Something Rotten!</em>, and world and U.S. premieres of works by Christopher Cerrone, Jonathan Bingham, and Hans Thomalla.</p>
+        <p>As a composer and arranger, Drew creates custom marching band arrangements for ensembles across North Carolina, and his original scores can be heard in short films, documentaries, and web series — most recently in Ariella Khan's <em>Converting</em>. On the education side, Drew serves on the chamber faculty at Midwest Young Artists Conservatory as Percussion Ensemble Director, and works with the Mooresville High School Marching Band as a front ensemble instructor and consultant.</p>
+        <p>Complementing his musical life, Drew is a video editor at Big Shoulders Digital Video Productions, where he has contributed to campaigns for clients including Capital One, AT&T, the Alzheimer's Association, and the city of Rosemont, as well as narrative, comedy, and documentary projects.</p>
+      </div>
     </div>
   </section>
 
